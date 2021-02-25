@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+	<testsuites>
+		<testsuite name="main">
+			<directory>test</directory>
+		</testsuite>
+	</testsuites>
+
+	<coverage processUncoveredFiles="true">
+		<include>
+			<directory suffix=".php">src</directory>
+		</include>
+		<report>
+			<php outputFile="build/logs/clover.cov" />
+		</report>
+	</coverage>
+</phpunit>
