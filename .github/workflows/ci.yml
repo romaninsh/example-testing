@@ -9,7 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: php-actions/composer@master
+      #- uses: php-actions/composer@master
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: imagick, swoole
 
       #- name: PHPUnit Tests
         #uses: php-actions/phpunit@dynamic-docker
